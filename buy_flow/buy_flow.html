@@ -1,0 +1,250 @@
+<!--
+	说明：
+	1、UI框架采用：SUI mobile  http://m.sui.taobao.org/
+	
+	2、JS组件 demo :http://m.sui.taobao.org/assets/js/demos.js
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>我的生活</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<style type="text/css">
+			.page-group {
+				background: #FFFFFF;
+				
+			}
+			
+			.buttons-tab {
+				margin-bottom: 0.25rem;
+				box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+				-webkit-box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+			}
+			
+			.buttons-tab .button {
+				height: 2.2rem;
+				line-height: 2.2rem;
+				color: #999;
+			}
+			
+			.buttons-tab .button.active {
+				color: #1D99FB;
+				border-color: #1D99FB;
+			}
+			
+			.list-block {
+				margin: 0;
+			}
+			
+			.list-block .item-content {
+				background: #fff;
+				padding: 0.65rem 0.6rem;
+				margin-bottom: 0.25rem;
+			}
+			
+			.list-block .item-media+.item-inner {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.list-block .item-inner:after {
+				background-color: #fff;
+			}
+			
+			.list-block ul {
+				background: #F8F8FC;
+			}
+			
+			.item-title p {
+				margin: 0;
+			}
+			
+			.item-title .p1 {
+				font-size: 0.8rem;
+				color: #1D99FB;
+			}
+			
+			.item-title .p2 {
+				font-size: 0.6rem;
+				color: #333;
+			}
+			
+			.item-title .p3 {
+				font-size: 0.5rem;
+				color: #999;
+			}
+			
+			.tips {
+				display: inline-block;
+				padding: 0 0.55rem;
+				height: 0.85rem;
+				line-height: 0.85rem;
+				border-radius: 0.425rem;
+				-webkit-border-radius: 0.425rem;
+				background: #FDD1D3;
+				border: 1px solid #ff3b5e;
+				color: #F9686E;
+				font-size: 0.55rem;
+			}
+			
+			.list-block .item-after {
+				display: inline-block;
+				padding: 0 0.75rem;
+				height: 1.2rem;
+				line-height: 1.2rem;
+				border-radius: 0.6rem;
+				-webkit-border-radius: 0.6rem;
+				background: #1D99FB;
+				color: #fff;
+				font-size: 0.7rem;
+			}
+			
+			.actions-modal-group:first-child,.actions-modal-group:nth-child(2),.actions-modal-group:nth-child(3){
+				margin: 0;
+				background-color: #fff;
+				padding: 0.5rem 0;
+				border-bottom: 1px solid #EEEEEE;
+			}
+			
+			.actions-modal-button {
+				color: #fff;
+				background: #fff;
+				width: 11.7rem;
+				height: 2.2rem;
+				opacity: 0.7;
+			}
+			
+			.actions-modal-group:first-child .actions-modal-button,.actions-modal-label{
+				background: #1D99FB url(img/zfb.png) no-repeat 0.65rem center;
+				background-size: 1.7rem;
+				border-radius: 1.1rem;
+				-webkit-border-radius: 1.1rem;
+				margin: 0 auto;
+			}
+			.actions-modal-group:nth-child(2) .actions-modal-button,.actions-modal-label{
+				background: #52c333 url(img/wx.png) no-repeat 0.65rem center;
+				background-size: 1.7rem;
+				border-radius: 1.1rem;
+				-webkit-border-radius: 1.1rem;
+				margin: 0 auto;
+			}
+			.actions-modal-group:nth-child(3) .actions-modal-button,.actions-modal-label{
+				width: 100%;
+				background: #fff;
+				color: #333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page-group">
+			<div class="page page-current">
+				<div class="content">
+
+					<div class="buttons-tab">
+						<a href="#tab1" class="tab-link active button">本地流量</a>
+						<a href="#tab2" class="tab-link button">全国流量</a>
+					</div>
+
+					<div class="tabs">
+						<div id="tab1" class="tab active">
+
+							<div class="list-block">
+								<ul>
+									<!--循环体-->
+									<li class="item-content">
+										<div class="item-media"><i class="icon icon-f7"></i></div>
+										<div class="item-inner">
+											<div class="item-title">
+												<p class="p1">
+													<span style="margin-right: 0.5rem;">200M</span>
+													<span class="tips">送200M流量币</span>
+												</p>
+												<p class="p2">15元</p>
+												<p class="p3">本月有效</p>
+											</div>
+											<div class="item-after create-actions">购买</div>
+										</div>
+									</li>
+									<!--循环体结束-->
+
+									<!--循环体-->
+									<li class="item-content">
+										<div class="item-media"><i class="icon icon-f7"></i></div>
+										<div class="item-inner">
+											<div class="item-title">
+												<p class="p1">
+													<span style="margin-right: 0.5rem;">200M</span>
+													<span class="tips">送200M流量币</span>
+												</p>
+												<p class="p2">15元</p>
+												<p class="p3">本月有效</p>
+											</div>
+											<div class="item-after create-actions">购买</div>
+										</div>
+									</li>
+									<!--循环体结束-->
+								</ul>
+							</div>
+
+						</div>
+
+						<div id="tab2" class="tab">
+
+							<p>全国流量</p>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$(document).on('click', '.create-actions', function() {
+					var buttons1 = [{
+							text: '支付宝',
+							bold: true,
+							onClick: function() {
+								console.log("支付宝")
+							}
+						}];
+					
+					var button2 = [{
+							text: '微信',
+							bold: true,
+							onClick: function() {
+								console.log("微信")
+							}
+						}];
+						
+					var button3 = [
+				        {
+				          text: '取消'
+				        }
+				     ];
+					var groups = [buttons1,button2,button3];
+					$.actions(groups);
+				});
+
+				$.init()
+			});
+		</script>
+	</body>
+
+</html>
